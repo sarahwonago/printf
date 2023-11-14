@@ -10,7 +10,8 @@ int _printf(const char * const format, ...)
         {"%c", print_c},
         {"%s", print_s}, 
         {"%%", print_percentage}
-       
+        {"%i", print_integer},
+        {"%d", print_integer_dec}
     };
 
     va_list args;

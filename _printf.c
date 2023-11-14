@@ -1,15 +1,17 @@
 #include "main.h"
 /**
- * _printf - is a function that selects the correct function to print.
- * @format: identifier to look for.
- * Return: the length of the string.
+ * _printf - produces output according to a format
+ * @format: format string
+ * Return: number of characters printed (excluding null byte)
  */
 int _printf(const char * const format, ...)
 {
     match p[] = {
-        {"%s", print_s}, {"%c", print_c},
+        {"%c", print_c},
+        {"%s", print_s}, 
         {"%%", print_percentage},
-        {"%i", print_integer}, {"%d", print_integer_dec}
+        {"%i", print_integer},
+        {"%d", print_integer_dec}
     };
 
     va_list args;
@@ -18,25 +20,31 @@ int _printf(const char * const format, ...)
     va_start(args, format);
     if (format == NULL || (format[0] == '%' && format[1] == '\0'))
         return (-1);
-
     while (format[i] != '\0')
     {
-        int match_found = 0;
-
-        for (j = 13; j >= 0; j--)
+        if (format[i] == '%')
         {
-            if (p[j].id[0] == format[i] && p[j].id[1] == format[i + 1])
+            j = 0;
+            while (j < (int)(sizeof(p) / sizeof(p[0])))
             {
-                length += p[j].f(args);
-                i = i + 2;
-                match_found = 1;
-                break;
+                if (format[i + 1] == p[j].id[1])
+                {
+                    length += p[j].f(args);
+                    i += 2;
+                    break;
+                }
+                j++;
+            }
+            if (j == (int)(sizeof(p) / sizeof(p[0])))
+            {
+                _putchar('%');
+                length++;
+                i++;
             }
         }
-
-        if (!match_found)
+        else
         {
-            putchar(format[i]);
+            _putchar(format[i]);
             length++;
             i++;
         }

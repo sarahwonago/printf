@@ -9,9 +9,9 @@ int _printf(const char * const format, ...)
     match p[] = {
         {"%c", print_c},
         {"%s", print_s},
-        {"%%", print_percentage}
-        {"%i", print_integer},
-        {"%d", print_integer_dec}
+        {"%%", print_percentage},
+        {"%d", print_integer_dec},
+        {"%i", print_integer}
     };
 
     va_list args;

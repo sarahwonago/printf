@@ -25,6 +25,7 @@ int print_s(va_list args);
 int print_strlen(char *s);
 int print_strlenc(const char *str);
 int print_percentage(void);
+int print_number(int n, int negative);
 int print_integer(va_list args);
 int print_integer_dec(va_list args);
 int print_binary(va_list args);

@@ -17,7 +17,8 @@ int _printf(const char * const format, ...)
         {"%o", print_octal},
         {"%x", print_hexadecimal},
         {"%X", print_HEX},
-        {"%S", print_String}
+        {"%S", print_String},
+        {"%p", print_address}
     };
 
     va_list args;

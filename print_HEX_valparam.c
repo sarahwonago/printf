@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_HEX - converts to HEXADECIMAL
- * @val: argument
+ * print_HEX_valparam - converts to HEXADECIMAL
+ * @num: argument
  * Return: counter
  */
 

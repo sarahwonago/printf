@@ -6,7 +6,7 @@
  */
 int _printf(const char * const format, ...)
 {
-    match p[] = {
+    spec p[] = {
         {"%c", print_c},
         {"%s", print_s},
         {"%%", print_percentage},

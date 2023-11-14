@@ -4,6 +4,13 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
+/**
+ * struct format - Struct format
+ *
+ * @id: The identifier string
+ * @f: The function associated
+ */
+
 typedef struct format
 {
     char *id;

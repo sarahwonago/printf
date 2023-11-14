@@ -6,17 +6,17 @@
 #include <stdarg.h>
 
 /**
- * struct format - Struct format
+ * struct format - Struct specifier
  *
  * @id: The identifier string
  * @f: The function associated
  */
-typedef struct format
+typedef struct specifier
 {
     char *id;
     int (*f)();
     
-} match;
+} spec;
 
 int _putchar(char c);
 int _printf(const char *format, ...);

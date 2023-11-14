@@ -2,12 +2,10 @@
 
 /**
  * print_percentage - prints the percentage sign
- * Returns: integer
+ * Return: number of characters printed
  */
-
- int print_percentage(void)
- {
-     _putchar(37);
-     return (1);
- }
-
+int print_percentage(void)
+{
+    _putchar('%');
+    return (1);
+}

@@ -1,5 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
@@ -10,7 +11,6 @@
  * @id: The identifier string
  * @f: The function associated
  */
-
 typedef struct format
 {
     char *id;

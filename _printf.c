@@ -12,7 +12,11 @@ int _printf(const char * const format, ...)
         {"%%", print_percentage},
         {"%d", print_integer_dec},
         {"%i", print_integer},
-        {"%b", print_binary}
+        {"%b", print_binary},
+        {"%u", print_unsigned_int},
+        {"%o", print_octal},
+        {"%x", print_hexadecimal},
+        {"%X", print_HEX}
     };
 
     va_list args;

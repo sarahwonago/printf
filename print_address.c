@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_address - prints address
+ * print_address - prints the address
  * @val: argument
  * Return: integer
  */

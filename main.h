@@ -6,7 +6,7 @@
 #include <stdarg.h>
 
 /**
- * struct format - Struct specifier
+ * struct specifier - Struct specifier
  *
  * @id: The identifier string
  * @f: The function associated
@@ -36,8 +36,6 @@ int print_HEX_valparam(unsigned int num);
 int print_String(va_list val);
 int print_hex_valarg(unsigned long int num);
 int print_address(va_list val);
-int print_s_reverse(va_list val);
-int print_rot13(va_list val);
 
 #endif /* MAIN_H */
 
